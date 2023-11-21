@@ -1,4 +1,4 @@
-# Written by Janvier Nshimyumukiza. November 2023
+# Written by Janvier <jnshimyu@alumni.cmu.edu>. November 2023
 
 #pip install xlrd
 #pip install python-docx
