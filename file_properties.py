@@ -8,28 +8,6 @@ from docx import Document
 import win32com.client
 
 def extract_excel_properties_xls(file_path):
-    # Open the Excel workbook
-    wb = xlrd.open_workbook(file_path)
-    print(f"Created: {xlrd.xldate_as_datetime(wb.info.created, 0)}")
-    # Get properties
-    properties = {
-        'Title': wb.get_prop('Title'),
-        'Author': wb.get_prop('Author'),
-        'Created': wb.get_prop('Create_DTM'),
-        'Last_modified': wb.get_prop('Last_Save_DTM'),
-    }
-
-    # Print properties
-    print("\nXLS File Properties:\n---------------------------")
-    for key, value in properties.items():
-        print(f"{key}: {value}")
-
-    print(dir(wb.properties))
-    # Close the workbook
-    wb.close()
-
-
-def extract_core_properties_xls(file_path):
     excel_app = win32com.client.Dispatch("Excel.Application")
     excel_app.Visible = False  # Set to True if you want Excel to be visible
 
@@ -112,8 +90,6 @@ if __name__ == "__main__":
     extract_excel_properties_xlsx(file_path_xlsx)
 
     extract_excel_properties_docx(file_path_docx)
-
-    # extract_excel_properties_xls(file_path_xls)
     
-    extract_core_properties_xls(file_path_xls_full)
+    extract_excel_properties_xls(file_path_xls_full) # This function might need a full path
     
