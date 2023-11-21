@@ -7,7 +7,7 @@ import openpyxl
 from docx import Document
 import win32com.client
 
-def extract_excel_properties_xls(file_path):
+def extract_core_properties_xls(file_path):
     excel_app = win32com.client.Dispatch("Excel.Application")
     excel_app.Visible = False  # Set to True if you want Excel to be visible
 
@@ -38,7 +38,7 @@ def extract_excel_properties_xls(file_path):
         excel_app.Quit()
 
 
-def extract_excel_properties_xlsx(file_path):
+def extract_core_properties_xlsx(file_path):
     # Load the Excel workbook
     wb = openpyxl.load_workbook(file_path)
 
@@ -61,7 +61,7 @@ def extract_excel_properties_xlsx(file_path):
     wb.close()
 
 
-def extract_excel_properties_docx(file_path):
+def extract_core_properties_docx(file_path):
     # Open the Excel file as a Word document
     doc = Document(file_path)
 
@@ -87,9 +87,9 @@ if __name__ == "__main__":
     file_path_xlsx = "I:\Projects\ABC Community\DataMgt\Reports for Team\CSPB Monthly Dashboard Reports\CSPB Dashboard 2023 10.xlsx"
     file_path_docx = "./doc_files/Haleon_Protocol_ Jul 19 2023_Final.docx"
 
-    extract_excel_properties_xlsx(file_path_xlsx)
+    extract_core_properties_xlsx(file_path_xlsx)
 
-    extract_excel_properties_docx(file_path_docx)
+    extract_core_properties_docx(file_path_docx)
     
-    extract_excel_properties_xls(file_path_xls_full) # This function might need a full path
+    extract_core_properties_xls(file_path_xls_full) # This function might need a full path
     
