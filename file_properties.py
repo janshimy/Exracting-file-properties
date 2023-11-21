@@ -1,3 +1,5 @@
+# Written by Janvier Nshimyumukiza. November 2023
+
 #pip install xlrd
 #pip install python-docx
 #pip install pywin32
@@ -82,14 +84,13 @@ def extract_core_properties_docx(file_path):
     
 
 if __name__ == "__main__":
-    file_path_xls = "./doc_files/BB01B.xls"
-    file_path_xls_full = r"C:\Users\janshimy\Downloads\BB01B.xls"
-    file_path_xlsx = "I:\Projects\ABC Community\DataMgt\Reports for Team\CSPB Monthly Dashboard Reports\CSPB Dashboard 2023 10.xlsx"
-    file_path_docx = "./doc_files/Haleon_Protocol_ Jul 19 2023_Final.docx"
+    file_path_xls_full = r"path/to/your/file.xls"
+    file_path_xlsx = "path/to/your/file.xlsx"
+    file_path_docx = "path/to/your/file.docx"
 
     extract_core_properties_xlsx(file_path_xlsx)
 
     extract_core_properties_docx(file_path_docx)
     
-    extract_core_properties_xls(file_path_xls_full) # This function might need a full path
+    extract_core_properties_xls(file_path_xls_full) # This function might need a full path parsed as raw string
     
