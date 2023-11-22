@@ -19,17 +19,26 @@ def extract_core_properties_xls(file_path):
         # Access core properties
         core_properties = workbook.BuiltinDocumentProperties
 
-        # print(dir(core_properties),'\n')
+        # Print available properties. Viewable properties
+        print("\nAvailable Properties for XLS file:\n---------------------------")
+        for prop in core_properties:
+            print(prop.Name)
 
         # Print core properties
         print("\nXLS File Properties:\n---------------------------")
         print(f"Title: {core_properties('Title').Value}")
         print(f"Author: {core_properties('Author').Value}")
         print(f"Last Author: {core_properties('Last Author').Value}")
-        # print(f"Created: {core_properties('Created').Value}")
-        # print(f"Last Modified: {core_properties('Last Modified').Value}")
+        print(f"Created: {core_properties('Creation date').Value}")
+        print(f"Last Modified: {core_properties('Last save time').Value}")
+        print(f"Document version: {core_properties('Document version').Value}")
+        print(f"Content type: {core_properties('Content type').Value}")
+        print(f"Security: {core_properties('Security').Value}")
+        print(f"Revision number: {core_properties('Revision number').Value}")
+        print(f"Application name: {core_properties('Application name').Value}")
+        print(f"Manager: {core_properties('Manager').Value}")
+        print(f"Company: {core_properties('Company').Value}")
 
-        print(type(core_properties))
 
     except Exception as e:
         print(f"Error: {e}")
