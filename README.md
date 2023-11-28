@@ -1,6 +1,6 @@
 # Exracting-file-properties
-This repository contains the python scripts that could help extract metadata or properties of document files. 
-The sample code shows with example for XLS, XLSX, and DOCX files. Hope it will help someone.
+This repository contains the python scripts that could help extract metadata or core properties of document files. 
+The sample code shows with examples for XLS, XLSX, and DOCX files. Hope it will help someone.
 
 Sharing data manipulation and extraction code for older file formats like .xls is crucial for preserving historical data, 
 supporting legacy systems, and fostering collaboration within the community. I hope the functions in the script provide 
